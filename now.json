@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "fortech",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "alias": ["fortech"]
+}
