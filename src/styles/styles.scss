@@ -1,5 +1,5 @@
 @import 'variables.scss';
-@import 'gradient.css';
+@import 'gradient.scss';
 
 ::selection {
   background: $theme-color;
@@ -180,7 +180,6 @@ blockquote::after {
   color: $table-border-color;
   display: block;
   text-align: center;
-  vertical-align: bottom;
   height: 40px;
   font-style: normal;
 }
