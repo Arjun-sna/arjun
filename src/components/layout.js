@@ -11,14 +11,14 @@ class Layout extends React.Component {
       <div>
         <Wrapper>
           <header>
-            <a href="{{ site.baseurl }}/" className="website-title">
+            <Link to="/" className="website-title">
               Arjun
-            </a>
+            </Link>
             <nav>
-              <a href="{{ site.baseurl }}/about/">Blog</a>
-              <a href="{{ site.baseurl }}/about/">About</a>
-              <a href="{{ site.baseurl }}/contact/">Contact</a>
-              <a href="{{ site.baseurl }}/archive/">Archive</a>
+              <Link to="/blog">Blog</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/archive">Archive</Link>
             </nav>
           </header>
           { children }
