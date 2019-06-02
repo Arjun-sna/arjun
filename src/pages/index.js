@@ -1,44 +1,34 @@
 import React from "react"
+import Layout from '../components/layout';
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
-import Wrapper from "../components/wrapper";
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    console.log(posts)
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        {/* <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })} */}
+      <Layout>
+        {
+          posts.map(({ node }) => {
+            const { excerpt, frontmatter: { title, date }} = node;
+            
+            return (
+              <article>
+                <span className="meta">
+                  { date }
+                </span>
+                <Link><h1>{ title }</h1></Link>
+                <p>
+                  { excerpt }
+                  <Link className="read-more" href="/">Read  →</Link>
+                </p>
+              </article>
+            )
+          })
+        }
       </Layout>
     )
   }
