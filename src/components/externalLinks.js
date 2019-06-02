@@ -1,12 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
+
+const siteLink = [
+  { className: 'fa-linkedin', extLink: '' },
+  { className: 'fa-github', extLink: '' },
+  { className: 'fa-stack-overflow', extLink: 'https://stackoverflow.com/users/2809326/arjun' },
+  { className: 'fa-twitter', extLink: '' },
+  { className: 'fa-facebook-official', extLink: '' },
+]
 
 export default () => (
   <>
-    <Link className="fa-sm fa fa-linkedin" href=""></Link>
-    <Link className="fa-sm fa fa-github" href=""></Link>
-    <Link className="fa-sm fa fa-stack-overflow" href="https://stackoverflow.com/users/2809326/arjun"></Link>
-    <Link className="fa-sm fa fa-twitter" href=""></Link>
-    <Link className="fa-sm fa fa-facebook-official" href=""></Link>
+    {
+      siteLink.map(({ className, extLink }) => (
+        <a className={`fa-sm fa ${className}`}  target="_blank" href={extLink} />
+      ))
+    }
   </>
 )
