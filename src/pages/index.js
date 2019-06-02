@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby"
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
     console.log(posts)
 
@@ -13,12 +12,12 @@ class BlogIndex extends React.Component {
       <Layout>
         {
           posts.map(({ node }) => {
-            const { excerpt, frontmatter: { title, date }} = node;
+            const { excerpt, timeToRead, frontmatter: { title, date }} = node;
             
             return (
               <article>
                 <span className="meta">
-                  { date }
+                  { `🗓️ ${date} • ⌛ ${timeToRead} min read` }
                 </span>
                 <Link><h1>{ title }</h1></Link>
                 <p>
@@ -47,6 +46,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }

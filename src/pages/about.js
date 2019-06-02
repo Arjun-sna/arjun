@@ -9,7 +9,7 @@ class About extends React.Component {
         <h1 className="text-center">About Me</h1>
         <br />
         <p>
-          <img src="http://www.gravatar.com/avatar/25e64e519ecd251446d48fbc09e0c87a?s=300" class="img-circle" />
+          <img src="http://www.gravatar.com/avatar/6f5c7e921b7858f3f855024c15000ea5?s=300" class="img-circle" />
         </p>
         <p class="subtitle text-center">
           <Link class="fa fa-linkedin" href=""></Link>
