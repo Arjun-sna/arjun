@@ -1,6 +1,7 @@
 import React from "react"
-import Wrapper from './wrapper';
 import { Link } from "gatsby"
+import Wrapper from './wrapper';
+import ExternalLinks from './externalLinks';
 
 class Layout extends React.Component {
   render() {
@@ -24,7 +25,11 @@ class Layout extends React.Component {
         </Wrapper>
         <footer>
           <div className="inner">
-            <p className="text-center"><i>The central enemy of reliability is complexity</i></p>
+            <p className="text-center">
+              <i>The central enemy of reliability is complexity</i>
+              <br />
+              <ExternalLinks />
+            </p>
           </div>
         </footer>
 

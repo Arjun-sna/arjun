@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import ExternalLinks from '../components/externalLinks';
 
 class About extends React.Component {
   render() {
@@ -12,11 +13,7 @@ class About extends React.Component {
           <img src="http://www.gravatar.com/avatar/6f5c7e921b7858f3f855024c15000ea5?s=300" class="img-circle" />
         </p>
         <p class="subtitle text-center">
-          <Link class="fa fa-linkedin" href=""></Link>
-          <Link class="fa fa-github" href=""></Link>
-          <Link class="fa fa-stack-overflow" href=""></Link>
-          <Link class="fa fa-twitter" href=""></Link>
-          <Link class="fa fa-facebook-official" href=""></Link>
+          <ExternalLinks />
         </p>
         <ul>
           <li>Computer Science Engineering Graduate</li>
