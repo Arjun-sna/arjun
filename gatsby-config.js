@@ -69,11 +69,26 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-plugin-typography`,
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Source Sans Pro',
+            variants: [`400`, `700`, `900`]
+          },
+          {
+            family: 'Crimson Text',
+            variants: [`400`, `600`, `700`]
+          }
+        ]
+      }
+    }
   ],
 }
