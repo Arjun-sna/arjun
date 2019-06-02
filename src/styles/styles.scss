@@ -350,8 +350,8 @@ footer {
   font-size: 0.8em;
   color: $subtitle-color;
   text-align: center;
-  background-color: $subtitle-color;
-  border-top: 1px solid $subtitle-color;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   height: 140px;
 }
 footer a {
