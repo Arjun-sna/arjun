@@ -21,11 +21,11 @@ So in order to execute multiple AsyncTask in parallel, we have to use `THREAD_PO
 
 Below is the sample of running multiple AsyncTasks
 
-{% highlight java %}
+```java
 for (Request req : allPendingRequest) {
   new BatchTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, req);
 }
-{% endhighlight %} 
+```
 
 What the above code does is, for all the parallel requests to be made, it creates a new AsyncTask and instead of executing it using `SERIAL_EXECUTOR`(by using `execute()` method), we pass in the `AsyncTask.THREAD_POOL_EXECUTOR` to be used as executor for executing tasks in parallel.
 

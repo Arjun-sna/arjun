@@ -8,7 +8,7 @@ summary: Multi-Touch in android was available since Android 2.0. When more than 
 ---
 Multi-Touch in android was available since Android 2.0. When more than one finger touches the screen multi-touch gesture happens and android provide various apis to handle these gestures. Lets start with the basic event handling for single finger on the screen
 
-{% highlight java %}
+```java
 public boolean onTouchEvent(MotionEvent ev){
 final int action = ev.getAction();
 switch(action){
@@ -23,7 +23,7 @@ switch(action){
    }
    return true;
 }
-{% endhighlight %}
+```
 
 The above is the one of many methods of handling touches which logs touch down and up of single finger. This work fine as long as we don't need to handle multiple fingers. But in many cases handling single finger events in not sufficient. For handling multi-touch we need to handle the below two additional events.
 
@@ -43,7 +43,7 @@ Lets find how we can use the above discussed things and handle multi-touch. We w
 
 Basically how we handle this is when pointer goes down, take that event's `X` and `Y` and check whether the point (X,Y) lies with in the area of any of the three button and perform operations accordingly as below
 
-{% highlight java %}
+```java
 public boolean onTouchEvent(MotionEvent motionEvent){
   int x,y;
   final int action = ev.getAction();
@@ -78,11 +78,11 @@ public boolean onTouchEvent(MotionEvent motionEvent){
 }
 // right, left, jump in the above code are
 //RECT objects which represent the button location on screen.
-{% endhighlight %}
+```
 
 The above code will work for single pointer events. When multiple pointer touches the screen, events will be missed desired output is not achieved. Now will revise the above code so that we will handle all events when multiple pointers touches the screen.
 
-{% highlight java %}
+```java
 int x,y;
 final int action = ev.getAction();
 switch(motionEvent.getAction() & MotionEvent.ACTION_MASK) {
@@ -138,11 +138,11 @@ switch(motionEvent.getAction() & MotionEvent.ACTION_MASK) {
         break;
 
  return true;
-{% endhighlight %}
+```
 
 Now it looks fine, when secondary pointer goes in contact or leaves the screen, `ACTION_POINTER_DOWN` and `ACTION_POINTER_DOWN` events are triggered respectively and we have handled it well. But this is not enough. If you have noticed, we always use `motionEvent.getX()` and `motionEvent.getY()` to get x and y co-ordinated. By default `getX()` and `getY()` returns co-ordinated of pointer in index 0. So what we are doing is always handle co-ordinates of primary poitner even though we handle secondary pointer events. Lets tweek the code above a little more to make it work perfectly.
 
-{% highlight java %}
+```java
 int x,y;
 final int action = ev.getAction();
 switch(motionEvent.getAction() & MotionEvent.ACTION_MASK) {
@@ -202,21 +202,21 @@ switch(motionEvent.getAction() & MotionEvent.ACTION_MASK) {
         break;
 
  return true;
-{% endhighlight %}
+```
 
 Now lets discuss the changes done above. For events `ACTION_DOWN` and `ACTION_UP`, we have not changed anything since it will be triggered on for primary pointer(first pointer which triggers event). For other two event we are finding the index of the pointer for which the event has occurred and get the x,y co-ordinates of the event with the pointer index as below
 
-{% highlight java %}
+```java
 final int pointerIndexDown = (motionEvent.getAction() &
                          MotionEvent.ACTION_POINTER_INDEX_MASK) >> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
 
 final int pointerIndexUp = (motionEvent.getAction() &
                         MotionEvent.ACTION_POINTER_INDEX_MASK) >> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
-{% endhighlight %}
+```
 
 In the above `pointerIndexDown` will hold the index of pointer which came in contact with screen when there is other pointer(s) already in contact with screen and by which the event was triggered. In other words, it is the recent pointer which came in contact with screen after the primary pointer. And `pointerIndexUp` holds the index of the pointer which left the screen recently when other pointer(s) is already on the screen. We use these pointer indices to get the correct co-ordinates of the event and perform operation
 
- {% highlight java %}
+ ```java
 
 x = (int) motionEvent.getX(pointerIndexDown);
 y = (int) motionEvent.getY(pointerIndexDown);
@@ -224,7 +224,7 @@ y = (int) motionEvent.getY(pointerIndexDown);
 x = (int) motionEvent.getX(pointerIndexUp);
 y = (int) motionEvent.getY(pointerIndexUp);
 
- {% endhighlight %}
+ ```
 
 `motionEvent.getX(pointerIndex)` gives the x co-ordinate of event which was triggered by the pointer with given pointer index. Same goes for `motionEvent.getY(pointerIndex)` which gives y co-ordinate.
 
