@@ -1,10 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,28 +12,23 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        {/* <SEO
+        <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+           { `🗓️ ${post.frontmatter.date} • ⌛ ${post.timeToRead} min read` }
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
           }}
         />
-        <Bio />
 
         <ul
           style={{
@@ -60,7 +53,7 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </li>
-        </ul> */}
+        </ul>
       </Layout>
     )
   }
@@ -79,6 +72,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
+      timeToRead
       html
       frontmatter {
         title
