@@ -12,17 +12,22 @@ class BlogIndex extends React.Component {
       <Layout>
         {
           posts.map(({ node }) => {
-            const { excerpt, timeToRead, frontmatter: { title, date }} = node;
+            const {
+              excerpt,
+              timeToRead,
+              frontmatter: { title, date },
+              fields: { slug }
+            } = node;
             
             return (
               <article>
                 <span className="meta">
                   { `🗓️ ${date} • ⌛ ${timeToRead} min read` }
                 </span>
-                <Link><h1>{ title }</h1></Link>
+                <Link to={slug}><h1>{ title }</h1></Link>
                 <p>
                   { excerpt }
-                  <Link className="read-more" href="/">Read  →</Link>
+                  <Link to={slug} className="read-more" href="/">Read  →</Link>
                 </p>
               </article>
             )
