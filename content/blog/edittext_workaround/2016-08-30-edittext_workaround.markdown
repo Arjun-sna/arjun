@@ -13,7 +13,7 @@ The cause of the above problem is that the `EditText` focus is not cleared when 
 
 First let me put the entire extended `EditText` code and we will dig into the code later
 
-{% highlight java %}
+```java
 public class CustomEditText extends EditText {
   public CustomEditText(Context context, AttributeSet attrs, int defStyle) {
     super(context, attrs, defStyle);
@@ -55,7 +55,7 @@ public class CustomEditText extends EditText {
     return super.onKeyPreIme(keyCode, event);
   }
 }
-{% endhighlight %}  
+```  
 
 So now what have we done in `handleBtnClick()`
 Here a listener is added to listen EdittorAction button click in softkeyboard, in which hiding the keyboard and clearing the focus on current `EditText`. So now if the user hides the keyboard by pressing EditorAction button, and focuses the `EditText` again it will pan perfectly and `EditText` will show above the keyboard
