@@ -17,7 +17,6 @@ class Layout extends React.Component {
             <nav>
               <Link to="/">Blog</Link>
               <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
               <Link to="/archive">Archive</Link>
             </nav>
           </header>

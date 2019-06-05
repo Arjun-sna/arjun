@@ -509,6 +509,16 @@ li {
     text-align: center;
 }
 
+.img-small-icon {
+  width: 15px;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 /**
 * Add back the container background-color, border-radius, padding, margin
 * and overflow that we removed from <pre>.
