@@ -1,43 +1,38 @@
 import React from "react"
+import Layout from '../components/layout';
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    console.log(posts)
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
+      <Layout>
+        {
+          posts.map(({ node }) => {
+            const {
+              excerpt,
+              timeToRead,
+              frontmatter: { title, date },
+              fields: { slug }
+            } = node;
+            
+            return (
+              <article>
+                <span className="meta">
+                  { `🗓️ ${date} • ⌛ ${timeToRead} min read` }
+                </span>
+                <Link to={slug}><h1>{ title }</h1></Link>
+                <p>
+                  { excerpt }
+                  <Link to={slug} className="read-more" href="/">Read  →</Link>
+                </p>
+              </article>
+            )
+          })
+        }
       </Layout>
     )
   }
@@ -56,13 +51,13 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }
