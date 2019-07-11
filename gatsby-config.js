@@ -4,13 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    title: `Arjun`,
+    author: `Arjun`,
+    siteUrl: `https://arjunsn.now.sh`,
   },
   plugins: [
     {
@@ -90,20 +86,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Source Sans Pro',
-            variants: [`400`, `700`, `900`]
-          },
-          {
-            family: 'Crimson Text',
-            variants: [`400`, `600`, `700`]
-          }
-        ]
-      }
-    },
   ],
 }
