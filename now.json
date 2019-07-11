@@ -8,5 +8,10 @@
       "config": { "distDir": "public" }
     }
   ],
+  "build": {
+    "env": {
+      "GITHUB_TOKEN": "@github_token"
+    }
+  },
   "alias": ["fortech", "arjunsn"]
 }

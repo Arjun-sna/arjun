@@ -27,9 +27,9 @@ switch(action){
 
 The above is the one of many methods of handling touches which logs touch down and up of single finger. This work fine as long as we don't need to handle multiple fingers. But in many cases handling single finger events in not sufficient. For handling multi-touch we need to handle the below two additional events.
 
-`ACTION_POINTER_DOWN` - MotionEvent.ACTION_POINTER_DOWN is the event triggered whenever the secondary pointer touches the screen. If there is already a pointer(finger) on the screen and one more pointer goes in contact with the screen, ACTION_POINTER_DOWN event is triggered. For all the next coming pointers the ACTION_POINTER_DOWN is triggered. MotionEvent.ACTION_DOWN will be triggered only for the first pointer coming in contact with the screen.
+`ACTION_POINTER_DOWN` - MotionEvent.ACTION\_POINTER\_DOWN is the event triggered whenever the secondary pointer touches the screen. If there is already a pointer(finger) on the screen and one more pointer goes in contact with the screen, ACTION\_POINTER\_DOWN event is triggered. For all the next coming pointers the ACTION\_POINTER\_DOWN is triggered. MotionEvent.ACTION_DOWN will be triggered only for the first pointer coming in contact with the screen.
 
-`ACTION_POINTER_UP` - MotionEvent.ACTION_POINTER_UP is the event triggered when a pointer goes up and there in yet another pointer still in contact with the screen. The same event is triggered for all pointer going up till the last pointer and MotionEvent.ACTION_UP will be triggered for the last pointer leaving the screen.
+`ACTION_POINTER_UP` - MotionEvent.ACTION\_POINTER\_UP is the event triggered when a pointer goes up and there in yet another pointer still in contact with the screen. The same event is triggered for all pointer going up till the last pointer and MotionEvent.ACTION_UP will be triggered for the last pointer leaving the screen.
 
 The next two things we should know to keep track of each pointer is are `Pointer Index` and `Pointer ID`. Lets see what they are and how they help us in handling multi-touch.
 

@@ -1,12 +1,13 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    title: `Arjun`,
+    author: `Arjun`,
+    description: `My Site`,
+    siteUrl: `https://arjunsn.now.sh`,
   },
   plugins: [
     {
@@ -44,12 +45,24 @@ module.exports = {
             options: {
               inlineCodeMarker: null,
               showLineNumbers: false,
+              classPrefix: "lang-",
             }
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
       },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      }
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
@@ -75,26 +88,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Source Sans Pro',
-            variants: [`400`, `700`, `900`]
-          },
-          {
-            family: 'Crimson Text',
-            variants: [`400`, `600`, `700`]
-          }
-        ]
-      }
-    }
   ],
 }

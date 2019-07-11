@@ -1,0 +1,17 @@
+export const projectsToShow = [
+  'android-contextual-action-bar',
+  'android-swipecards-view',
+  'android-passcodeview',
+  'DSA',
+  'android-constraintlayout-demo',
+  'android-permission-checker-app',
+  'android-file-chooser',
+  'Android-AudioRecorder-App',
+  'LocationAware',
+  'git-point',
+  'react-native-githubgist-client',
+  'arjun',
+  'directions_graphql',
+  'imgur-client-app',
+  'nearby',
+];

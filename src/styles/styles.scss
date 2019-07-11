@@ -21,7 +21,7 @@
 /* Content */
 
 body {
-  font-family: "Crimson Text", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Futura, Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 22px;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
@@ -115,7 +115,7 @@ img {
   text-align: center;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Futura, Verdana, sans-serif;
   font-weight: 900;
   background-image: none;
   text-decoration: none !important;
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: normal;
 }
 h1 {
-  font-size: 1.9em;
+  font-size: 0.8em;
   color: #404040;
 }
 h2 {
@@ -155,7 +155,7 @@ td, th {
   padding: .8rem
 }
 th {
-  background-color: $text-color;
+  background-color: #AEAEAE;
 }
 tr {
   border-bottom: 1px solid  $text-color;
@@ -196,8 +196,7 @@ code {
 }
 p code {
   padding: 2px 4px;
-  font-size: 80%;
-  color: #c7254e;
+  font-size: 90%;
   background-color: #f9f2f4;
   border-radius: 4px;
 }
@@ -313,7 +312,7 @@ textarea {
   box-sizing: border-box;
 }
 input[type="submit"] {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Futura, Verdana, sans-serif;
   font-size: inherit;
   font-weight: 600;
   color: $subtitle-color;
@@ -326,7 +325,7 @@ input[type="submit"] {
 }
 .pagination {
   margin-top: -30px;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Futura, Verdana, sans-serif;
   font-weight: 600;
   padding-bottom: 50px;
 }
@@ -364,12 +363,20 @@ footer .inner {
   padding: 0 15px;
   max-width: 740px;
 }
-
+.chip {
+  font-size: 0.9rem;
+  padding: 3px 4px;
+  background: #AEAEAE;
+  color: white;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 0 3px;
+}
 
 /* Content overwrites */
 
 .website-title {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: "Source Code Pro", Verdana, sans-serif;
   font-weight: 600;
   font-size: 24px;
   text-align: center;
@@ -437,7 +444,7 @@ nav a.current {
     margin: 70px;
   }
   h1 {
-    font-size: 2.6em;
+    font-size: 1.5em;
     margin-bottom: -10px;
   }
   h2 {
@@ -484,7 +491,7 @@ nav a.current {
 }
 @media all and (min-width: 760px) {
   h1 {
-    font-size: 1.9em;
+    font-size: 1.5em;
   }
   article:last-of-type::after {
     content: "";
