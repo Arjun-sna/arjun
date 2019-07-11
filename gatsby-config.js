@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Arjun`,
     author: `Arjun`,
+    description: `My Site`,
     siteUrl: `https://arjunsn.now.sh`,
   },
   plugins: [
@@ -44,6 +45,7 @@ module.exports = {
             options: {
               inlineCodeMarker: null,
               showLineNumbers: false,
+              classPrefix: "lang-",
             }
           },
           `gatsby-remark-copy-linked-files`,

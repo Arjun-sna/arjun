@@ -155,7 +155,7 @@ td, th {
   padding: .8rem
 }
 th {
-  background-color: $text-color;
+  background-color: #AEAEAE;
 }
 tr {
   border-bottom: 1px solid  $text-color;
@@ -192,12 +192,11 @@ blockquote::after {
   margin-bottom: 30px;
 }
 code {
-  font-family: Futura, monospace;
+  font-family: "Source Code Pro", monospace;
 }
 p code {
   padding: 2px 4px;
-  font-size: 80%;
-  color: #c7254e;
+  font-size: 90%;
   background-color: #f9f2f4;
   border-radius: 4px;
 }
@@ -377,7 +376,7 @@ footer .inner {
 /* Content overwrites */
 
 .website-title {
-  font-family: Futura, Verdana, sans-serif;
+  font-family: "Source Code Pro", Verdana, sans-serif;
   font-weight: 600;
   font-size: 24px;
   text-align: center;
