@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
@@ -51,6 +55,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -95,6 +110,6 @@ module.exports = {
           }
         ]
       }
-    }
+    },
   ],
 }
