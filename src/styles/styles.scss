@@ -52,7 +52,7 @@ p, form {
   margin: 30px auto;
   word-wrap: break-word;
   font-size: 20px;
-  text-align: justify;
+  text-align: center;
   color: #5D6769;
 }
 p * {
@@ -278,6 +278,8 @@ nav {
 }
 article {
   margin-top: 30px;
+  text-align: center;
+  border-bottom: solid 0.5px;
 }
 article::after,
 header::after {
