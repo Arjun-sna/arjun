@@ -6,8 +6,8 @@ import { projectsToShow } from '../utils/helpers';
 export default ({ data }) => {
   const filteredProjects = data.github.viewer.repositories.nodes.filter(
     ({ name }) => projectsToShow.includes(name)
-    );
-  console.log({filteredProjects});
+  );
+
   return (
     <Layout>
       {

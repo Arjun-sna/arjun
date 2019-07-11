@@ -1,7 +1,7 @@
 require("dotenv").config({
   path: `.env`,
 });
-console.log(process.env.GITHUB_TOKEN)
+
 module.exports = {
   siteMetadata: {
     title: `Arjun`,
