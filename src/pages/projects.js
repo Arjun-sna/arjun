@@ -17,12 +17,21 @@ export default ({ data }) => {
               { `${project.stargazers.totalCount} Stars • ${project.forkCount} forks` }
             </span>
             <a href={project.url} target="_blank"><h1>{ project.name }</h1></a>
+            <div style={{ marginTop: '15px'}}>
+              {
+                project.repositoryTopics.nodes.map(({ topic: { name }}) => (
+                  <span className="chip">
+                    {name}
+                  </span>
+                ))
+              }
+            </div>
             <p>
               { project.description }
             </p>
             {
               project.homepageUrl && 
-                <a href={project.homepageUrl} target="_blank" className="read-more">Try Demo →</a>
+                <p><a href={project.homepageUrl} target="_blank" className="read-more">Try Demo →</a></p>
             }
           </article>
         ))
