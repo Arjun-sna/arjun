@@ -11,12 +11,16 @@ export default ({ data }) => {
   return (
     <Layout>
       {
-        filteredProjects.map(project => (
+        filteredProjects.map((project, index) => (
           <article>
             <span className="meta">
               { `${project.stargazers.totalCount} Stars • ${project.forkCount} forks` }
             </span>
-            <a href={project.url} target="_blank"><h1>{ project.name }</h1></a>
+            <a href={project.url} target="_blank">
+              <h1>
+                { project.name }
+              </h1>
+            </a>
             <div style={{ marginTop: '15px'}}>
               {
                 project.repositoryTopics.nodes.map(({ topic: { name }}) => (
@@ -28,11 +32,11 @@ export default ({ data }) => {
             </div>
             <p>
               { project.description }
+              {
+                project.homepageUrl && 
+                  <span><a href={project.homepageUrl} target="_blank" className="try-demo">Try Demo →</a></span>
+              }
             </p>
-            {
-              project.homepageUrl && 
-                <p><a href={project.homepageUrl} target="_blank" className="read-more">Try Demo →</a></p>
-            }
           </article>
         ))
       }

@@ -281,7 +281,6 @@ article {
   text-align: center;
   border-bottom: solid 0.5px;
 }
-article::after,
 header::after {
   margin: 50px 0;
   content: "•";
@@ -301,6 +300,14 @@ a.read-more {
   background-image: none;
   text-decoration: none !important;
   font-weight: 600;
+}
+a.try-demo {
+  display: block;
+  background-image: none;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
 }
 input[type="email"],
 textarea {
