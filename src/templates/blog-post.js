@@ -19,12 +19,13 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            display: `block`,
+            display: 'block',
+            textAlign: 'left'
           }}
         >
            { `🗓️ ${post.frontmatter.date} • ⌛ ${post.timeToRead} min read` }
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
           }}
