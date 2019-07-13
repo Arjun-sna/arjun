@@ -395,7 +395,7 @@ footer .inner {
 .website-title {
   font-family: "Source Code Pro", Verdana, sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   display: block;
   background-image: none;
@@ -418,6 +418,11 @@ nav a:hover {
 nav a.current {
   color: $subtitle-color;
 }
+nav {
+  .link-active {
+    font-size: 38px;
+  }
+}
 .blog-content {
   p {
     text-align: justify;
@@ -429,7 +434,7 @@ nav a.current {
 
 @media all and (min-width: 370px) {
   .website-title {
-    font-size: 32px;
+    font-size: 38px;
   }
   body {
     font-size: 24px;
