@@ -1,4 +1,5 @@
 export const projectsToShow = [
+  'directions_graphql_frontend',
   'android-contextual-action-bar',
   'android-swipecards-view',
   'android-passcodeview',
