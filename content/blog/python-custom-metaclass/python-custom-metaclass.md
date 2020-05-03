@@ -1,4 +1,11 @@
-# Python Custom Metaclass
+---
+layout: post
+title:  "Python Custom Metaclass"
+date:   2020-05-03 08:42:32 +0530
+categories: Node JS
+summary: Python Custom Metaclass
+
+---
 
 As discussed in the metaclasses definition, whenever an object is created for a class, the `__call__` method of a metaclass is called which in turn calls the `__new__` and then `__init__` method of the class for which the object is created.
 

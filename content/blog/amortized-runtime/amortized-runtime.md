@@ -1,4 +1,11 @@
-# Amortized runtime
+---
+layout: post
+title:  "Amortized runtime"
+date:   2020-02-20 08:42:32 +0530
+categories: Algorithms
+summary: Usually, we calculate runtime by the number of operations done to complete or get a solution. In amortized it is a bit different where we calculate the time complexity by computing the average run time over a series of operations with varying run times.
+
+---
 
 Usually, we calculate runtime by the number of operations done to complete or get a solution. In amortized it is a bit different where we calculate the time complexity by computing the average run time over a series of operations with varying run times.
 

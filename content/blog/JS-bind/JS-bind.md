@@ -1,4 +1,11 @@
-# JS bind
+---
+layout: post
+title:  "JS bind"
+date:   2020-03-22 08:42:32 +0530
+categories: Javascript
+summary: Understand this and bind.
+
+---
 
 Understand this and bind. The value of this in any function depends on the call point of that function. There many ways of binding this to a function like implicit, explicit, etc. One such way of binding is to use the `bind` method. `bind` method is available to all functions from the `Function` prototype. So let us work on our own implementation of `bind` to understand how it works and how the value of `this` is defined in any function. To start with lets look in default bind of window object to this in any functions. 
 

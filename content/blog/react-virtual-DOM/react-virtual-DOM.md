@@ -1,4 +1,11 @@
-# React Virtual DOM
+---
+layout: post
+title:  "React Virtual DOM"
+date:   2020-05-02 08:42:32 +0530
+categories: Node JS
+summary: One of the key features of React is its virtual DOM. Whenever the explanation or benefit of virtual DOM is talked about, is it always said that DOM manipulations are an expensive operation and that is where virtual DOM helps in reducing the number of DOM manipulation. 
+---
+
 
 One of the key features of React is its virtual DOM. Whenever the explanation or benefit of virtual DOM is talked about, is it always said that DOM manipulations are an expensive operation and that is where virtual DOM helps in reducing the number of DOM manipulation. 
 

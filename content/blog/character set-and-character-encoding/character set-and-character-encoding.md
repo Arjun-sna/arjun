@@ -1,4 +1,11 @@
-# Character set and Character encoding
+---
+layout: post
+title:  "Character set and Character encoding"
+date:   2020-03-20 08:42:32 +0530
+categories: Computer Science
+summary: Machines understand 0s and 1s.
+
+---
 
 Machines understand 0s and 1s. Character sets are created to convert characters between machine code and human-readable symbols. For example, the character **`a`** will be encoded based on the character set when it is stored in memory. And when the character is displayed, a decoder is used to convert the content in the memory into a human-readable symbol.
 

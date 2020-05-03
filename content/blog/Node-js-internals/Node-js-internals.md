@@ -1,4 +1,11 @@
-# Node.js internals
+---
+layout: post
+title:  "Node.js internals"
+date:   2020-04-22 08:42:32 +0530
+categories: Node JS
+summary: Node.js is a cross-platform Javascript runtime, which executes Javascript code outside of the browser environment. It uses the Chrome V8 engine and libuv.
+
+---
 
 Node.js is a cross-platform Javascript runtime, which executes Javascript code outside of the browser environment. It uses the Chrome V8 engine and libuv. V8 engine compiles Javascript code into the C++ code. libuv is a c++ library that provides asynchronous I/O operation like the file system, networking, etc. Node.js acts as an interface, which helps to access low-level C++ API while writing JS code.
 

@@ -1,4 +1,10 @@
-# Web Server Gateway Interface(WSGI)
+---
+layout: post
+title:  "Web Server Gateway Interface(WSGI)"
+date:   2020-05-01 08:42:32 +0530
+categories: Node JS
+summary: WSGI is the specification of Python. WSGI is a specification that describes how a web server communicates with the web application and how web servers can be chained to process a request. WSGI was created to standardise way to execute python code for web applications.
+---
 
 WSGI is the specification of Python. WSGI is a specification that describes how a web server communicates with the web application and how web servers can be chained to process a request. WSGI was created to standardise way to execute python code for web applications. 
 
