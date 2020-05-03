@@ -7,8 +7,6 @@ summary: Metaclasses in python are way of supporting metaprogramming. Python has
 
 ---
 
-# Python Metaclass(type)
-
 Metaclasses in python are way of supporting metaprogramming. Python has built-in metaclasses and also supports creating custom metaclasses. Understanding metaclasses in python helps to understand under the hood of classes and objects in python. 
 
 In python, to get the instance of or type of or class of an object, there are two ways → accessing `__class__`attribute of the object and calling `type(obj)`function. Both returns the same value in new-style classes. Old-style classes before 3 have different result for those though
@@ -63,7 +61,7 @@ The diagram is more self explantory. The flow is
 
 Not lets look at the creation of instance of metaclass which is creating a class itself.
 
-![Python%20Metaclass%20type/class-creation.png](Python%20Metaclass%20type/class-creation.png)
+![assets/class-creation.png](assets/class-creation.png)
 
 Let's see the flow 
 
