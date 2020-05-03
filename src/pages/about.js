@@ -40,8 +40,8 @@ class About extends React.Component {
         </p>
         <ul>
           <li>Computer Science Engineering Graduate</li>
-          <li>Tech Lead at CodeBrahma Technologies</li>
-          <li>Worked on Android, Java, JS while engineering products in various domains like social networking, live video streaming, instant messaging, health care and more.</li>
+          <li>Software Engineer at Synup</li>
+          <li>Worked on JS, Java, Android while engineering products in various domains like social networking, live video streaming, instant messaging, health care and more.</li>
         </ul>
       </Layout>
     )
