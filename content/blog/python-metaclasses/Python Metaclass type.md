@@ -52,7 +52,7 @@ Knowing the flow of instance creation helps understand metaclasses better.
 
 Creating a class instance which is basically creating objects from classes can be depicted from the below diagram
 
-![Python%20Metaclass%20type/instance-creation.png](Python%20Metaclass%20type/instance-creation.png)
+![assets/instance-creation.png](assets/instance-creation.png)
 
 The diagram is more self explantory. The flow is
 
