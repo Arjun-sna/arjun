@@ -1,22 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
-import { CopyToClipboard } from "react-copy-to-clipboard"
-import classnames from "classnames"
 import Layout from "../components/layout"
 import ExternalLinks from "../components/externalLinks"
-import CopyIcon from "../../content/assets/copy.png"
-
-const ClipboardInfo = info => (
-  <p className="subtitle text-center">
-    {info}
-    <CopyToClipboard text={info}>
-      <img
-        src={CopyIcon}
-        className={classnames(["img-small-icon", "pointer"])}
-      />
-    </CopyToClipboard>
-  </p>
-)
+import ClipboardInfo from "../components/clipboardInfo"
 
 class About extends React.Component {
   copyToClipboard = content => {
@@ -35,7 +20,7 @@ class About extends React.Component {
             className="img-circle"
           />
         </p>
-        <ClipboardInfo info={email} />
+        <clipboardInfo info={email} />
         <p className="subtitle text-center">
           <ExternalLinks />
         </p>
