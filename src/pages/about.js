@@ -20,7 +20,7 @@ class About extends React.Component {
             className="img-circle"
           />
         </p>
-        <clipboardInfo info={email} />
+        <ClipboardInfo info={email} />
         <p className="subtitle text-center">
           <ExternalLinks />
         </p>

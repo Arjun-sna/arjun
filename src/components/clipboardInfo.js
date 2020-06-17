@@ -1,4 +1,5 @@
 import React from "react"
+import classnames from "classnames"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import CopyIcon from "../../content/assets/copy.png"
 
