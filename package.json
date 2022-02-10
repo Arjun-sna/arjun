@@ -29,7 +29,7 @@
     "gatsby-source-graphql": "^2.1.0",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
